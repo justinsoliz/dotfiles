@@ -25,3 +25,4 @@ fi
 
 alias express='~/node_modules/express/bin/express'
 
+alias migrate='rake db:migrate && rake db:test:prepare'
