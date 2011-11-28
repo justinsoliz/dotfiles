@@ -108,4 +108,4 @@ xterm*|rxvt*)
     ;;
 esac
 
-export PATH=~/bin:~/apps/st2:$PATH 
+export PATH=~/bin:~/apps/st2:$PATH
