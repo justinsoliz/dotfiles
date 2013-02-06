@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/justinsoliz/Downloads/peepcode-vim-code/tutorial-apache-files'
-let g:netrw_dirhist_2='/Users/justinsoliz/Downloads'
-let g:netrw_dirhist_3='/Users/justinsoliz/projects/seconds/seconds_web/vendor/assets/stylesheets'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/justinsoliz/playground/js/peepcode_fullstack/hotpie'

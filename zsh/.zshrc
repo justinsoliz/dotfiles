@@ -23,3 +23,9 @@ alias gp='git push'
 alias gs='git status'
 alias glg='git log --pretty=oneline --abbrev-commit'
 alias gh='git@github.com'
+
+function md() { mkdir "$@"; cd "$@" }
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

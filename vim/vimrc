@@ -40,6 +40,8 @@ set visualbell                    " No beeping.
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 
+set timeoutlen=400
+
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -60,7 +62,7 @@ set cmdheight=2
 set switchbuf=useopen
 set numberwidth=5
 set showtabline=2
-set winwidth=88
+set winwidth=89
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
