@@ -6,6 +6,8 @@ set nocompatible                  " Must come first because it changes other opt
 silent! call pathogen#runtime_append_all_bundles()
 
 syntax enable                     " Turn on syntax highlighting.
+
+filetype on
 filetype plugin indent on         " Turn on file type detection.
 
 runtime macros/matchit.vim        " Load the matchit plugin.
@@ -92,15 +94,18 @@ nmap <space> zz
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-":set t_Co=256 " 256 colors
-":set background=dark
+:set t_Co=256 " 256 colors
 ":color grb256
 
-" let g:solarized_termcolors = 16
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
+"let g:solarized_termcolors = 16
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+"let g:solarized_termtrans = 1
+
+:set background=dark
 
 colorscheme railscasts
+"colorscheme solarized
 
 imap <silent> <C-e> <ESC>A
 
@@ -147,7 +152,7 @@ map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
-autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+" autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
