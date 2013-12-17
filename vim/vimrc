@@ -185,7 +185,7 @@ function! RunTestFile(...)
 
     " Run the tests for the previously-marked file.
     "let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-    let in_test_file = match(expand("%"), '\(_test.js\)$') != -1
+    let in_test_file = match(expand("%"), '\(_spec.js\)$') != -1
     if in_test_file
         echo "has in test file"
         call SetTestFile()
@@ -211,14 +211,14 @@ function! RunTests(filename)
     :w
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    ":silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    ":silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    ":silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    ":silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
+    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
 
 
     if match(a:filename, '\.js$') != -1
-        exec ":!./node_modules/.bin/mocha -R spec -u bdd " . a:filename
+        exec ":!mocha -R spec -u bdd " . a:filename
 
     elseif match(a:filename, '\.feature$') != -1
         exec ":!script/features " . a:filename
@@ -234,3 +234,21 @@ function! RunTests(filename)
         end
     end
 endfunction
+
+" open url in web browser
+function! Browser ()
+  let line0 = getline (".")
+
+  let line = matchstr (line0, "https?[^ ]*")
+  :if line==""
+  let line = matchstr (line0, "ftp[^ ]*")
+  :endif
+  :if line==""
+  let line = matchstr (line0, "file[^ ]*")
+  :endif
+  echo line
+  exec ":silent !open -a '/Applications/Google\ Chrome.app'".line
+endfunction
+map <Leader>w :call Browser ()<CR>
+
+
