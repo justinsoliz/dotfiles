@@ -12,7 +12,7 @@ compinit
 alias ga='git add -A'
 alias gm='git merge'
 alias gb='git branch'
-alias gca='git commit -m'
+alias gc='git commit -m'
 alias gco='git checkout'
 alias gd='git diff'
 alias gp='git push'

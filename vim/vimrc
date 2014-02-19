@@ -68,7 +68,7 @@ set winwidth=89
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
-set t_ti= t_te=
+" set t_ti= t_te=
 
 
 " Quickly edit/reload the vimrc file
@@ -83,18 +83,18 @@ map <C-n> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+" set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 " Center screen with space
 nmap <space> zz
 
 " Reload Git changes to buffer
-:set autoread
+" set autoread
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:set t_Co=256 " 256 colors
+" set t_Co=256 " 256 colors
 ":color grb256
 
 "let g:solarized_termcolors = 16
@@ -102,7 +102,7 @@ nmap <space> zz
 "let g:solarized_contrast = "high"
 "let g:solarized_termtrans = 1
 
-:set background=dark
+" set background=dark
 
 colorscheme railscasts
 "colorscheme solarized
@@ -137,6 +137,9 @@ map <leader>gg :topleft :split Gemfile<cr>
 let g:CommandTCursorStartMap='<leader>f'
 map<leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+
+" ignore node modules and bower components
+set wildignore+=node_modules,bower_components
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
