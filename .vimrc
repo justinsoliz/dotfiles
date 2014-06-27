@@ -65,7 +65,3 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " colorscheme solarized
 colorscheme railscasts
 
-" Command T
-let g:CommandTCursorStartMap='<leader>f'
-map<leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
