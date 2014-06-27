@@ -27,9 +27,22 @@ nnoremap <c-l> <c-w>l
 let mapleader=","
 
 " miscellaneous settings
+syntax enable
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=5
 set showtabline=2
 set winwidth=89
 
+" setup colorscheme
+let g:solarized_termcolors=256
+" set background=dark
+" set background=light
+colorscheme solarized
+
+" set background for terminal use
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
