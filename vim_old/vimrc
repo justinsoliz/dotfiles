@@ -80,6 +80,14 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DustJS template config 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdCommenter integration
+let g:NERDCustomDelimiters = { 'dustjs': { 'left': '{!', 'right': '!}' } }
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -188,7 +196,7 @@ function! RunTestFile(...)
 
     " Run the tests for the previously-marked file.
     "let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-    let in_test_file = match(expand("%"), '\(_spec.js\)$') != -1
+    let in_test_file = match(expand("%"), '\(_test.js\)$') != -1
     if in_test_file
         echo "has in test file"
         call SetTestFile()
@@ -221,7 +229,7 @@ function! RunTests(filename)
 
 
     if match(a:filename, '\.js$') != -1
-        exec ":!mocha -R spec -u bdd " . a:filename
+        exec ":!NODE_ENV=test mocha --require should -R spec -u bdd " . a:filename
 
     elseif match(a:filename, '\.feature$') != -1
         exec ":!script/features " . a:filename
@@ -233,7 +241,7 @@ function! RunTests(filename)
             exec ":!bundle exec rspec --color " . a:filename
         else
             "exec ":!rspec --color " . a:filename
-            exec ":!./node_modules/.bin/mocha -R spec -u bdd " . a:filename
+            exec ":!NODE_ENV=test mocha --require should -R spec -u bdd " . a:filename
         end
     end
 endfunction
