@@ -8,7 +8,7 @@ set laststatus=2
 
 " add vim branch to status line
 " set statusline+=%{fugitive#statusline()}
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -35,14 +35,8 @@ set showtabline=2
 set winwidth=89
 
 " setup colorscheme
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 " set background=dark
 " set background=light
-colorscheme solarized
-
-" set background for terminal use
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+" colorscheme solarized
+colorscheme railscasts
