@@ -54,13 +54,20 @@ set visualbell                    " No beeping.
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 
+" tab configuration
+set tabstop=2                    " Global tab width.
+set shiftwidth=2                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
+set autoindent
+
+" backup configuration
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " setup colorscheme
-" let g:solarized_termcolors=256
-" set background=dark
+let g:solarized_termcolors=256
+set background=dark
 " set background=light
 " colorscheme solarized
 colorscheme railscasts
