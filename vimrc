@@ -78,10 +78,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " setup colorscheme
 let g:solarized_termcolors=256
-" set background=dark
-set background=light
-colorscheme solarized
-" colorscheme railscasts
+set background=dark
+" set background=light
+" colorscheme solarized
+colorscheme railscasts
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
