@@ -30,8 +30,3 @@ function md() { mkdir "$@"; cd "$@" }
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-[ -s "/Users/justin.soliz/.kre/kvm/kvm.sh" ] && . "/Users/justin.soliz/.kre/kvm/kvm.sh" # this loads kvm
-
-# set to vi style
-bindkey -v

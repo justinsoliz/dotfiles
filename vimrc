@@ -38,6 +38,8 @@ set wildignore+=node_modules,bower_components,client/components
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
 
+" nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
 
 " miscellaneous settings
 syntax enable
