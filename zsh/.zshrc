@@ -1,6 +1,6 @@
 
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
-export CLASSPATH=$CLASSPATH:/Users/justin.soliz/playground/courses/algorithms_1/bin/stdlib.jar
+export PATH="$HOME/bin:$HOME/bin/gradle-2.3/bin:$HOME/bin/apache-maven-3.2.5/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 setopt promptsubst
 autoload -U promptinit
@@ -27,6 +27,22 @@ alias lg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 
 function md() { mkdir "$@"; cd "$@" }
 
+alias tree='tree -I node_modules'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# bring in .net env
+source ~/bin/dotfiles/aspnet/dnvm.sh
+
+# function to set terminal text
+
+# $1 = type; 0 - both, 1 - tab, 2 - title
+# rest = text
+setTerminalText () {
+    # echo works in bash & zsh
+    local mode=$1 ; shift
+    echo -ne "\033]$mode;$@\007"
+}
+
+sst () { setTerminalText 1 $@; }
