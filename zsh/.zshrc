@@ -9,7 +9,8 @@ prompt grb
 autoload -U compinit
 compinit
 
-alias ga='git add -A'
+alias gaa='git add'
+alias gaa='git add -A'
 alias gm='git merge'
 alias gb='git branch'
 alias gc='git commit'
