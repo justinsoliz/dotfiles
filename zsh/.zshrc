@@ -1,6 +1,5 @@
 
 export PATH="$HOME/bin:$HOME/bin/gradle-2.3/bin:$HOME/bin/apache-maven-3.2.5/bin:/usr/local/sbin:/usr/local/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 setopt promptsubst
 autoload -U promptinit
@@ -10,7 +9,8 @@ prompt grb
 autoload -U compinit
 compinit
 
-alias ga='git add -A'
+alias gaa='git add'
+alias gaa='git add -A'
 alias gm='git merge'
 alias gb='git branch'
 alias gc='git commit'
@@ -31,9 +31,6 @@ alias tree='tree -I node_modules'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# bring in .net env
-source ~/bin/dotfiles/aspnet/dnvm.sh
 
 # function to set terminal text
 
