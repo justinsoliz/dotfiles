@@ -18,6 +18,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" testing endline
+:imap <c-e> <c-O>A
+
 " map leader to comma
 let mapleader=","
 
@@ -80,10 +83,17 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " setup colorscheme
 let g:solarized_termcolors=256
-set background=dark
+" let g:solarized_degrade = 0
+" set background=dark
 " set background=light
 " colorscheme solarized
-colorscheme railscasts
+" colorscheme railscasts
+" colorscheme onedark
+" colorscheme github
+" colorscheme grb256
+colorscheme jellybeans
+" colorscheme gotham256
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

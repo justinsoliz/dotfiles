@@ -43,3 +43,8 @@ setTerminalText () {
 }
 
 sst () { setTerminalText 1 $@; }
+
+# weird character thing
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""

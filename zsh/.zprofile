@@ -33,3 +33,10 @@ export PATH=$PATH:$SPARK_HOME/bin
 
 # android sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# terminal stuff?
+export TERM=xterm-256color
+
+# nvm stuff
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
