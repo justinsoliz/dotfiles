@@ -49,12 +49,30 @@
 [submodule "vim/bundle/vim-gradle"]
 	path = vim/bundle/vim-gradle
 	url = https://github.com/tfnico/vim-gradle.git
-[submodule "vim/bundle/vim-json"]
-	path = vim/bundle/vim-json
-	url = https://github.com/elzr/vim-json
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/delimitmate"]
 	path = vim/bundle/delimitmate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/tlib-vim"]
+	path = vim/bundle/tlib-vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/bundle/vim-addon-mw-utils"]
+	path = vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim/bundle/vim_snipmate"]
+	path = vim/bundle/vim_snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/vim-snippets"]
+	path = vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/docker-vim"]
+	path = vim/bundle/docker-vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vim/bundle/scss-syntax"]
+	path = vim/bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git

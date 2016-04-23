@@ -36,7 +36,7 @@ map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTClearMap='<S-u>'
 
 " ignore node modules and bower components
-set wildignore+=node_modules,bower_components,client/components
+set wildignore+=node_modules,bower_components
 
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
@@ -87,11 +87,11 @@ let g:solarized_termcolors=256
 " set background=dark
 " set background=light
 " colorscheme solarized
-" colorscheme railscasts
+colorscheme railscasts
 " colorscheme onedark
 " colorscheme github
 " colorscheme grb256
-colorscheme jellybeans
+" colorscheme jellybeans
 " colorscheme gotham256
 
 
@@ -125,7 +125,8 @@ function! BuildProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    exec ":!cargo build"
+    " exec ":!cargo build"
+    exec :!webpack
 endfunction 
 
 function! RunProject() 
@@ -149,7 +150,7 @@ function! RunTestFile(...)
 
     " Run the tests for the previously-marked file.
     "let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-    let in_test_file = match(expand("%"), '\(_test.js\)$') != -1
+    let in_test_file = match(expand("%"), '\(spec.js\)$') != -1
     if in_test_file
         echo "has in test file"
         call SetTestFile()
@@ -182,7 +183,7 @@ function! RunTests(filename)
 
 
     if match(a:filename, '\.js$') != -1
-        exec ":!NODE_ENV=test mocha --require should -R spec -u bdd " . a:filename
+        exec ":!NODE_ENV=test ./node_modules/mocha/bin/mocha --compilers js:babel-core/register -R spec -u bdd " . a:filename
 
     elseif match(a:filename, '\.feature$') != -1
         exec ":!script/features " . a:filename
@@ -194,7 +195,7 @@ function! RunTests(filename)
             exec ":!bundle exec rspec --color " . a:filename
         else
             "exec ":!rspec --color " . a:filename
-            exec ":!NODE_ENV=test mocha --require should -R spec -u bdd " . a:filename
+            exec ":!NODE_ENV=test mocha -R spec -u bdd " . a:filename
         end
     end
 endfunction

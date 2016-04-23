@@ -1,42 +1,39 @@
-source ~/.zshrc
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
-
-# setup go installation
-export PATH="$PATH:/usr/local/go/bin"
-
-# setup go path and workspace
-export GOPATH=$HOME/dev/projects/go_workspace
-export PATH="$PATH:/$GOPATH/bin"
-
-# hadoop defaults
-alias hstart="/usr/local/Cellar/hadoop/2.7.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.1/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.7.1/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.1/sbin/stop-dfs.sh"
-
-# hadooop exports
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
-
-# setup Rust src path
-export RUST_SRC_PATH=~/bin/rust/src
-
-# setup scala
-export SCALA_HOME=/usr/local/bin/scala  
-export PATH=$PATH:$SCALA_HOME/bin 
-
-# spark includes
-export SPARK_HOME=~/bin/spark-1.4.1
-export PATH=$PATH:$SPARK_HOME/bin
-
-# android sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-# terminal stuff?
-export TERM=xterm-256color
+alias gaa='git add'
+alias gaa='git add -A'
+alias gm='git merge'
+alias gb='git branch'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gd='git diff'
+alias gp='git push'
+alias gs='git status'
+# alias glg='git log --pretty=oneline --abbrev-commit'
+alias gh='git@github.com'
+alias ls='ls -lahG'
+alias glg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %C(bold red)%an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias lg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+alias gcb='git rev-parse --abbrev-ref HEAD'
 
-# nvm stuff
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+alias tree='tree -I node_modules'
+
+# function to set terminal text
+
+# $1 = type; 0 - both, 1 - tab, 2 - title
+# rest = text
+setTerminalText () {
+    DISABLE_AUTO_TITLE="true"
+    # echo works in bash & zsh
+    local mode=$1 ; shift
+    echo -ne "\033]$mode;$@\007"
+}
+
+sst () { setTerminalText 1 $@; }
+
+# setup visual studio code
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
