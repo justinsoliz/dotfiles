@@ -1,6 +1,6 @@
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-alias gaa='git add'
+alias ga='git add'
 alias gaa='git add -A'
 alias gm='git merge'
 alias gb='git branch'
