@@ -23,7 +23,7 @@
 	path = vim/bundle/vim-toml
 	url = https://github.com/cespare/vim-toml.git
 [submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
+	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "oh_my_zsh/.oh-my-zsh"]
 	path = oh_my_zsh/.oh-my-zsh
