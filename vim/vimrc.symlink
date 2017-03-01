@@ -182,7 +182,8 @@ function! RunTests(filename)
 
 
     if match(a:filename, '\.js$') != -1
-        exec ":!NODE_ENV=test ./node_modules/mocha/bin/mocha --compilers js:babel-core/register -R spec -u bdd " . a:filename
+        " exec ":!NODE_ENV=test ./node_modules/mocha/bin/mocha --compilers js:babel-core/register -R spec -u bdd " . a:filename
+        exec ":!NODE_ENV=test ./node_modules/.bin/jest " . a:filename
 
     elseif match(a:filename, '\.feature$') != -1
         exec ":!script/features " . a:filename
