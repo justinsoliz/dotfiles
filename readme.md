@@ -7,6 +7,10 @@ scripts/bootstrap.sh
 ```
 
 ## VIM
+add symlink for vim bundle directory
+```
+ln -s ~/.dotfiles/vim ~/.vim
+```
 
 ### Command-T
 
