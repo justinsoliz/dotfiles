@@ -1,7 +1,7 @@
 
 alias reload!='. ~/.zshrc'
 
-# alias ls='ls -lah'
+alias ls='ls -lahG'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
