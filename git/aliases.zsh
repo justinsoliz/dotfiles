@@ -1,6 +1,7 @@
 # git aliases
 
 alias gaa='git add -A'
+alias gcm='git commit -m'
 alias gm='git merge'
 alias gb='git branch'
 alias gc='git commit'
