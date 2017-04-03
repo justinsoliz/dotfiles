@@ -15,4 +15,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+setTerminalText () {
+    DISABLE_AUTO_TITLE="true"
+    # echo works in bash & zsh
+    local mode=$1 ; shift
+    echo -ne "\033]$mode;$@\007"
+}
+
+sst () { setTerminalText 1 $@; }
 
