@@ -201,3 +201,7 @@ function! RunTests(filename)
         end
     end
 endfunction
+
+" whitespace characters for tabs and spaces
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
