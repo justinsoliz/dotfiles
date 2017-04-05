@@ -2,6 +2,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+call plug#begin('~/.vim/plugged')
+Plug 'sbdchd/neoformat'
+call plug#end()
+
 " Must come first because it changes other options.
 set nocompatible                  
 
@@ -201,3 +205,16 @@ function! RunTests(filename)
         end
     end
 endfunction
+
+let g:neoformat_javascript_prettier = {
+            \ 'exe': 'prettier',
+            \ 'args': ['--stdin', '--single-quote'],
+            \ 'stdin': 1,
+            \ }
+
+let g:neoformat_enabled_javascript = ['prettier']
+let g:neoformat_enabled_jsx = ['prettier']
+autocmd! BufWritePre *.js Neoformat
+
+" setup syntax highlighting for various things
+let g:javascript_plugin_flow = 1
