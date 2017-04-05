@@ -58,3 +58,6 @@
 [submodule "vim/bundle/neoformat"]
 	path = vim/bundle/neoformat
 	url = https://github.com/sbdchd/neoformat
+[submodule "vim/plugged/neoformat"]
+	path = vim/plugged/neoformat
+	url = https://github.com/sbdchd/neoformat.git

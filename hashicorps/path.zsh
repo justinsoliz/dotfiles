@@ -1,2 +1,2 @@
 
-export PATH=$PATH:~/bin/hashicorps
+export PATH=$PATH:~/bin/hashicorps/bin
