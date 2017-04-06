@@ -2,12 +2,12 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-call plug#begin('~/.vim/plugged')
-Plug 'sbdchd/neoformat'
-call plug#end()
+" call plug#begin('~/.vim/plugged')
+" Plug 'sbdchd/neoformat'
+" call plug#end()
 
 " Must come first because it changes other options.
-set nocompatible                  
+set nocompatible
 
 " show the status line all the time
 set laststatus=2
@@ -120,7 +120,7 @@ map <leader>w :w\|:!script/features --profile wip<cr>
   "execute("!clear && rspec " . expand("%p") . ":" . line("."))
 "endfunction
 
-function! BuildProject() 
+function! BuildProject()
     :wa
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
@@ -130,9 +130,9 @@ function! BuildProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     " exec ":!cargo build"
     exec :!webpack
-endfunction 
+endfunction
 
-function! RunProject() 
+function! RunProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
@@ -140,7 +140,7 @@ function! RunProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     exec ":!cargo run"
-endfunction 
+endfunction
 
 function! RunTestFile(...)
     echo "running test file..."
@@ -221,4 +221,3 @@ let g:javascript_plugin_flow = 1
 
 " whitespace characters for tabs and spaces
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-
