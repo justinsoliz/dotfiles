@@ -206,15 +206,15 @@ function! RunTests(filename)
     end
 endfunction
 
-let g:neoformat_javascript_prettier = {
-            \ 'exe': 'prettier',
-            \ 'args': ['--stdin', '--single-quote'],
-            \ 'stdin': 1,
-            \ }
+" let g:neoformat_javascript_prettier = {
+            " \ 'exe': 'prettier',
+            " \ 'args': ['--stdin', '--single-quote'],
+            " \ 'stdin': 1,
+            " \ }
 
-let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_enabled_jsx = ['prettier']
-autocmd! BufWritePre *.js Neoformat
+" let g:neoformat_enabled_javascript = ['prettier']
+" let g:neoformat_enabled_jsx = ['prettier']
+" autocmd! BufWritePre *.js Neoformat
 
 " setup syntax highlighting for various things
 let g:javascript_plugin_flow = 1
