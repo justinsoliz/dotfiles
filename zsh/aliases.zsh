@@ -22,5 +22,7 @@ setTerminalText () {
     echo -ne "\033]$mode;$@\007"
 }
 
+alias tree='tree -I node_modules'
+
 sst () { setTerminalText 1 $@; }
 
