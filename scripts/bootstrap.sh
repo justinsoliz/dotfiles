@@ -105,6 +105,9 @@ link_file () {
 
 install_dotfiles () {
   info 'installing dotfiles'
+  info 'pulling down git submodules'
+  git submodule update --init --recursive
+  chmod +x ./scripts/run_install.sh
 
   local overwrite_all=false backup_all=false skip_all=false
 

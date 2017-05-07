@@ -7,7 +7,7 @@ filetype plugin indent on
 " call plug#end()
 
 " Must come first because it changes other options.
-set nocompatible                  
+set nocompatible
 
 " show the status line all the time
 set laststatus=2
@@ -63,7 +63,7 @@ set showmode                      " Display the mode you're in.
 set showtabline=2
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 set switchbuf=useopen
-set winwidth=89
+set winwidth=90
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
 set wrap                          " Turn on line wrapping.
@@ -120,7 +120,7 @@ map <leader>w :w\|:!script/features --profile wip<cr>
   "execute("!clear && rspec " . expand("%p") . ":" . line("."))
 "endfunction
 
-function! BuildProject() 
+function! BuildProject()
     :wa
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
@@ -130,9 +130,9 @@ function! BuildProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     " exec ":!cargo build"
     exec :!webpack
-endfunction 
+endfunction
 
-function! RunProject() 
+function! RunProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
@@ -140,7 +140,7 @@ function! RunProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     exec ":!cargo run"
-endfunction 
+endfunction
 
 function! RunTestFile(...)
     echo "running test file..."
@@ -221,4 +221,3 @@ endfunction
 
 " whitespace characters for tabs and spaces
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-

@@ -20,3 +20,4 @@ Command-T needs to be compiled
 cd vim/bundle/command-t
 rake make
 ```
+
