@@ -216,8 +216,8 @@ endfunction
 " let g:neoformat_enabled_jsx = ['prettier']
 " autocmd! BufWritePre *.js Neoformat
 
-" setup syntax highlighting for various things
-let g:javascript_plugin_flow = 1
+" " setup syntax highlighting for various things
+" let g:javascript_plugin_flow = 1
 
 " whitespace characters for tabs and spaces
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣

@@ -55,9 +55,6 @@
 [submodule "vim/bundle/vim-terraform"]
 	path = vim/bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
-[submodule "vim/bundle/neoformat"]
-	path = vim/bundle/neoformat
-	url = https://github.com/sbdchd/neoformat
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
