@@ -20,4 +20,11 @@ Command-T needs to be compiled
 cd vim/bundle/command-t
 rake make
 ```
+## plug setup
+```
+# Install Plug plugins
+:PlugInstall
 
+# sometimes clean is required
+:PlugClean!
+```
