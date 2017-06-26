@@ -1,4 +1,3 @@
-
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
 
@@ -41,3 +40,5 @@ unset config_files
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# OPAM configuration
+. /home/justinsoliz/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

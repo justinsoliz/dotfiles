@@ -4,6 +4,7 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'sbdchd/neoformat'
+Plug 'reasonml/vim-reason'
 call plug#end()
 
 " Must come first because it changes other options.
