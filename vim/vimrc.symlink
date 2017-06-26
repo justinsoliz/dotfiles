@@ -44,6 +44,11 @@ set wildignore+=node_modules,bower_components
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
 
+" NerdCommenter customized comment syntax
+let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' } }
+
+" let g:NERD_javascript_alt_style=1
+
 " nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
 
