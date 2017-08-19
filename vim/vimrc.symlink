@@ -4,6 +4,7 @@ filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'sbdchd/neoformat'
+Plug 'reasonml/vim-reason'
 call plug#end()
 
 " Must come first because it changes other options.
@@ -226,3 +227,10 @@ autocmd! BufWritePre *.js Neoformat
 
 " whitespace characters for tabs and spaces
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
+" vim fugitive config
+set diffopt+=vertical
+
+" flow syntax highlighting
+let g:javascript_plugin_flow = 1
+
