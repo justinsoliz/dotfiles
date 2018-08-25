@@ -37,9 +37,6 @@
 [submodule "vim/bundle/vim-jsx"]
 	path = vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/bundle/delimitmate"]
-	path = vim/bundle/delimitmate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/vim-snipmate"]
 	path = vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
