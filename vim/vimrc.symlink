@@ -232,5 +232,10 @@ set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set diffopt+=vertical
 
 " flow syntax highlighting
-let g:javascript_plugin_flow = 1
+" let g:javascript_plugin_flow = 1
+
+" make vim faster
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
 
