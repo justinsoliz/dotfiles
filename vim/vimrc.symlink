@@ -40,7 +40,7 @@ map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTClearMap='<S-u>'
 
 " ignore node modules and bower components
-set wildignore+=node_modules,bower_components
+set wildignore+=node_modules,bower_components,native/target
 
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
@@ -135,7 +135,7 @@ function! BuildProject()
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     " exec ":!cargo build"
-    exec :!webpack
+    " exec :!webpack
 endfunction
 
 function! RunProject()
@@ -241,5 +241,5 @@ set lazyredraw " to avoid scrolling problems
 
 " configure prettier formatter
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.graphql,*.md,*.vue Prettier
 
