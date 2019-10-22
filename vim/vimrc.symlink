@@ -40,7 +40,7 @@ map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTClearMap='<S-u>'
 
 " ignore node modules and bower components
-set wildignore+=node_modules,bower_components,native/target
+set wildignore+=node_modules,bower_components,native/target,allure-results
 
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
@@ -159,7 +159,7 @@ function! RunTestFile(...)
 
     " Run the tests for the previously-marked file.
     "let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-    let in_test_file = match(expand("%"), '\(spec.js\)$') != -1
+    let in_test_file = match(expand("%"), '\(spec.\(js\|ts\)\)$') != -1
     if in_test_file
         echo "has in test file"
         call SetTestFile()
@@ -196,9 +196,12 @@ function! RunTests(filename)
         exec ":!NODE_ENV=test ./node_modules/.bin/jest -i --useStderr " . a:filename
         " exec ":!npm run test-file " . a:filename
 
+    elseif match(a:filename, '\.ts$') != -1
+        exec ":!NODE_ENV=test ./node_modules/.bin/jest -i --useStderr " . a:filename
 
-    elseif match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
+
+    " elseif match(a:filename, '\.feature$') != -1
+        " exec ":!script/features " . a:filename
 
     else
         if filereadable("script/test")
