@@ -11,3 +11,6 @@ export PATH="$PATH:$HOME/hashicorps/bin"
 
 # ruby gems
 export PATH="$PATH:/usr/local/lib/ruby/gems"
+
+# rust
+export PATH="$PATH:$HOME/.cargo/bin"
