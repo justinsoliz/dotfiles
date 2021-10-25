@@ -17,3 +17,6 @@ export PATH="$PATH:$HOME/bin/flutter/bin"
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 
+# hashicorps
+export PATH="$PATH:$HOME/hashicorps/bin"
+

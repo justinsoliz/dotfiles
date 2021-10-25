@@ -3,6 +3,7 @@
 alias ga='git add'
 alias gaa='git add -A'
 alias gcm='git commit -m'
+alias gp='git pull upstream $(gcb)'
 alias gm='git merge'
 alias gb='git branch'
 alias gc='git commit'
