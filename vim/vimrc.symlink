@@ -40,7 +40,7 @@ map<leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTClearMap='<S-u>'
 
 " ignore node modules and bower components
-set wildignore+=node_modules,bower_components,native/target
+set wildignore+=node_modules,bower_components,native/target,target
 
 " NerdCommenter configuration
 let g:NERDSpaceDelims=1
