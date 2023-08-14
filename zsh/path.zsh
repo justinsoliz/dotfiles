@@ -4,6 +4,9 @@
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin"
 
+## apple silicon path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # mysql workbench tools
 export PATH="$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS"
 
@@ -23,4 +26,3 @@ export PATH="$PATH:$HOME/hashicorps/bin"
 
 # python
 export PATH="$PATH:/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.9/lib/python/site-packages"
-
