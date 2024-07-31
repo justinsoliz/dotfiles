@@ -26,7 +26,7 @@ alias tree='tree -I node_modules'
 
 alias tmux="TERM=xterm-256color tmux"
 
-alias kubectl="minikube kubectl --"
+# alias kubectl="minikube kubectl --"
 
 sst () { setTerminalText 1 $@; }
 

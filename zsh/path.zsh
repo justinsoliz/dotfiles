@@ -26,3 +26,7 @@ export PATH="$PATH:$HOME/hashicorps/bin"
 
 # python
 export PATH="$PATH:/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin:$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.9/lib/python/site-packages"
+
+# generic
+export PATH="$PATH:$HOME/.bin"
+
