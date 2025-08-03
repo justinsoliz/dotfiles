@@ -15,18 +15,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-setTerminalText () {
-    DISABLE_AUTO_TITLE="true"
-    # echo works in bash & zsh
-    local mode=$1 ; shift
-    echo -ne "\033]$mode;$@\007"
-}
+# setTerminalText () {
+#     DISABLE_AUTO_TITLE="true"
+#     # echo works in bash & zsh
+#     local mode=$1 ; shift
+#     echo -ne "\033]$mode;$@\007"
+# }
 
 alias tree='tree -I node_modules'
 
-alias tmux="TERM=xterm-256color tmux"
+# alias tmux="TERM=xterm-256color tmux"
 
 # alias kubectl="minikube kubectl --"
 
-sst () { setTerminalText 1 $@; }
+# sst () { setTerminalText 1 $@; }
 
